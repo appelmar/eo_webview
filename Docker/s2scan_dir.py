@@ -12,7 +12,7 @@ from subprocess import call
 
 AUTO_CONVERT_COG = False
 AUTO_BUILD_OVERVIEWS = False
-CATALOG_FILE = "/opt/eo_webtools/sentinel_webview/www/catalog.json"
+CATALOG_FILE = "/opt/eo_webview/www/catalog.json"
 S2VRT_PATH = "/usr/bin/s2vrt"
 VRT_PATH = "/opt/VRT"
 
