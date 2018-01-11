@@ -385,7 +385,7 @@
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     });
     osm.addTo(map);
-    var eolayer = L.tileLayer('http://localhost:8080/tms/asdasdsdddddd/{z}/{x}/{y}', {
+    var eolayer = L.tileLayer('../tms/asdasdsdddddd/{z}/{x}/{y}', {
         transparency: 'true',
         opacity: 1
     });
@@ -563,7 +563,7 @@
                     [
                         {"min" : color_scale($( "#ui_vis_grayscale_b" ).slider( "values", 0 )), "max" : color_scale($( "#ui_vis_grayscale_b" ).slider( "values", 1 ))}
                     ];
-            eolayer.setUrl('http://localhost:8080/tms/' + vis_pars.scene + '/{z}/{x}/{y}?bands=' + vis_pars.bands[0]  + '&min=' + vis_pars.color_range[0].min + '&max=' + vis_pars.color_range[0].max);
+            eolayer.setUrl('../tms/' + vis_pars.scene + '/{z}/{x}/{y}?bands=' + vis_pars.bands[0]  + '&min=' + vis_pars.color_range[0].min + '&max=' + vis_pars.color_range[0].max);
         }
         else {
 
@@ -576,7 +576,7 @@
                     ];
             var minstr = "" + vis_pars.color_range[0].min + ","  + vis_pars.color_range[1].min + "," + vis_pars.color_range[2].min;
             var maxstr = "" + vis_pars.color_range[0].max + ","  + vis_pars.color_range[1].max + "," + vis_pars.color_range[2].max;
-            eolayer.setUrl('http://localhost:8080/tms/' + vis_pars.scene + '/{z}/{x}/{y}?bands=' + vis_pars.bands[0]   + ',' +   vis_pars.bands[1]  + ',' +  vis_pars.bands[2]  + '&min=' + minstr + '&max=' + maxstr);
+            eolayer.setUrl('../tms/' + vis_pars.scene + '/{z}/{x}/{y}?bands=' + vis_pars.bands[0]   + ',' +   vis_pars.bands[1]  + ',' +  vis_pars.bands[2]  + '&min=' + minstr + '&max=' + maxstr);
 
         }
         vis_pars.opacitiy = $( "#ui_vis_opacity").slider( "value" );
